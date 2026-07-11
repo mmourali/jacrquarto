@@ -1,0 +1,31 @@
+---
+# ======================================================================
+# JACR Online Appendix Template
+# ======================================================================
+# JACR does not print appendices. Material that is needed for deeper
+# understanding or replication, but that would interrupt the main thrust of
+# the article, belongs here in a separate "online Appendix" file. Keep the
+# online appendix under 10 megabytes (it may include small audio or visual
+# files). Submit it as a separate file, not as part of the main manuscript.
+# ======================================================================
+
+title: "Online Appendix"
+jacr-mode: manuscript
+
+format:
+  jacrquarto-docx: default
+  jacrquarto-pdf: default
+
+bibliography: bibliography.bib
+---
+
+# Appendix A: Study Stimuli {.appendix}
+
+This appendix presents the stimuli and medical scenarios used in study 1.
+Participants read the following scenario before answering the dependent
+measures.
+
+# Appendix B: Full Regression Tables {.appendix}
+
+Detailed model output and robustness checks that support, but are not
+essential to, the claims in the main text.
