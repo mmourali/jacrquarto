@@ -1,0 +1,40 @@
+---
+# ======================================================================
+# Reference-format test harness for the jacrquarto extension.
+# Renders every tricky reference type so the output can be compared to the
+# JACR Guidelines for Authors. Not part of a real manuscript.
+#   quarto render reference-test.qmd --to jacrquarto-pdf
+# ======================================================================
+title: "Reference Format Test"
+jacr-mode: manuscript
+format:
+  jacrquarto-pdf: default
+bibliography: bibliography.bib
+# nocite forces every entry into the reference list even if not cited above.
+nocite: |
+  @belk2013, @wansink2013, @taylor1981, @lastovicka1979, @anderson1986,
+  @wallendorf1987, @simmons1986, @census1983, @doe2000, @frank1999,
+  @veblen1979, @scammon2011, @lasaleta2014, @sameyear1988a, @sameyear1988b
+---
+
+# In-Text Citation Tests
+
+Single author: [@belk2013]. Two authors, always both: [@taylor1981]. Two
+authors named in a sentence [@lastovicka1979].
+
+Three authors, first mention should list all three: [@lasaleta2014]. Three
+authors, second mention should collapse to "et al.": [@lasaleta2014]. Four or
+more authors, always "et al.": [@hibbard2004]; and a nine-author work
+[@scammon2011].
+
+Page locator, no "p." [@veblen1979, 25]. Multiple citations, listed
+chronologically and separated by semicolons [@taylor1981; @belk2013;
+@scammon2011]. Same author and year, disambiguated by letter
+[@sameyear1988a; @sameyear1988b].
+
+# Reference List
+
+The list below should reproduce the JACR reference formats: year in
+parentheses after the authors, unabbreviated periodical names in italics,
+issue by month, no "p." on page ranges, book and chapter formats with place
+and publisher, and the reprint shown as 1899/1979.
