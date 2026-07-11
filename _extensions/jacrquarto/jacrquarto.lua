@@ -403,12 +403,12 @@ function Pandoc(doc)
         table.insert(ms, "\\textbf{ABSTRACT}")
         table.insert(ms, "\\end{center}")
         table.insert(ms, "\\vspace{0.5\\baselineskip}")
-        table.insert(ms, "\\noindent " .. saved_meta.abstract)
+        table.insert(ms, "\\noindent " .. saved_meta.abstract .. "\\par")
       end
       if #saved_meta.keywords > 0 then
         table.insert(ms, "\\vspace{0.5\\baselineskip}")
         table.insert(ms, "\\noindent \\textit{Keywords:} "
-          .. table.concat(saved_meta.keywords, ", "))
+          .. table.concat(saved_meta.keywords, ", ") .. "\\par")
       end
       table.insert(ms, "\\newpage")
       new_blocks:insert(pandoc.RawBlock("latex", table.concat(ms, "\n")))
